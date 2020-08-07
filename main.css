@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
+
+}
+
+.product {
+    display: flex;
+    flex-flow: wrap;
+    padding: 1rem;
+}
+
+.nav-bar {
+    background: linear-gradient(-90deg, #84CF6A, #16C0B0);
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.form {
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.cap {
+    text-transform: capitalize;
+}
+
+.userInfo {
+    font-family: Montserrat, sans-serif;
+    margin: 10px 0;
+}
