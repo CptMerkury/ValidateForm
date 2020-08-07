@@ -81,7 +81,19 @@ Vue.component('user-info-form', {
     methods: {
         sendSubmit() {
             this.errors = []
-            if (this.name && this.email && this.number && this.password && this.confirmPassword && this.password === this.confirmPassword) {
+
+            if (this.name
+                && this.email
+                && this.number
+                && this.password
+                && this.confirmPassword
+                && this.password === this.confirmPassword
+                && this.name.length > 3
+                && typeof this.name !== 'number'
+                && !isNaN(this.validName(this.name)) && typeof this.name == 'string'
+                && this.validEmail(this.email)
+                && this.validNumber(this.number)
+                && typeof this.number !== "string") {
                 let userArray = {
                     name: this.name,
                     email: this.email,
@@ -98,26 +110,22 @@ Vue.component('user-info-form', {
                     this.errors.length = 0
 
             } else {
-                //Name valid
+                //form clear
                 if (!this.name) this.errors.push('Name required')
+                if (!this.email) this.errors.push('Email required')
+                if (!this.number) this.errors.push('Number required')
+                if (!this.password) this.errors.push('Password required')
+                if (!this.confirmPassword) this.errors.push('Confirm password required')
+                //Name valid
                 if (this.name.length < 3) this.errors.push('Name not correct, min length 3 symbol')
                 if (typeof this.name === 'number') this.errors.push('Name not correct, only letter symbol')
                 if (isNaN(this.validName(this.name)) && typeof this.name !== 'string') this.errors.push('Name not correct')
                 // //Email valid
-                if (!this.email) {
-                    this.errors.push('Email required')
-                } else if (!this.validEmail(this.email))
-                    this.errors.push('Please, write correct email')
+                if (!this.validEmail(this.email)) this.errors.push('Please, write correct email')
                 // //Number valid
-                if (!this.number) {
-                    this.errors.push('Number required')
-                } else if (!this.validNumber(this.number)) {
-                    this.errors.push('Please, write correct number')
-                }
+                if (!this.validNumber(this.number)) this.errors.push('Please, write correct number')
                 if (typeof this.number === "string") this.errors.push('Number not correct, use only numeric symbol')
                 // //Password valid
-                if (!this.password) this.errors.push('Password required')
-                if (!this.confirmPassword) this.errors.push('Confirm password required')
                 if (this.password !== this.confirmPassword) this.errors.push('Password mismatch')
             }
         },
