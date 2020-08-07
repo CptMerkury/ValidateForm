@@ -30,13 +30,7 @@ Vue.component('username-field', {
     methods: {
         addUserInfo(userArray) {
             this.userInfo.push(userArray)
-            // fetch('/article/fetch/post/user', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json;charset=utf-8'
-            //     },
-            //     body: JSON.stringify(user)
-            // });
+            console.log(userArray)
             console.log(JSON.stringify(userArray))
         }
     },
@@ -81,7 +75,6 @@ Vue.component('user-info-form', {
     methods: {
         sendSubmit() {
             this.errors = []
-
             if (this.name
                 && this.email
                 && this.number
@@ -90,10 +83,11 @@ Vue.component('user-info-form', {
                 && this.password === this.confirmPassword
                 && this.name.length > 3
                 && typeof this.name !== 'number'
-                && !isNaN(this.validName(this.name)) && typeof this.name == 'string'
+                // && !isNaN(this.validName(this.name)) && typeof this.name == 'string'
                 && this.validEmail(this.email)
                 && this.validNumber(this.number)
-                && typeof this.number !== "string") {
+                && typeof this.number !== "string"
+            ) {
                 let userArray = {
                     name: this.name,
                     email: this.email,
