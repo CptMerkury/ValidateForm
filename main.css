@@ -25,6 +25,7 @@ body {
 .form {
     margin: 0 auto;
     display: flex;
+    width: 50%;
     justify-content: left;
     align-items: center;
     flex-wrap: wrap;
@@ -38,8 +39,4 @@ body {
 .userInfo {
     font-family: Montserrat, sans-serif;
     margin: 10px 0;
-}
-
-.username{
-    margin: 0 auto;
 }
