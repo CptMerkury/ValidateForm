@@ -30,7 +30,6 @@ Vue.component('username-field', {
     methods: {
         addUserInfo(userArray) {
             this.userInfo.push(userArray)
-            console.log(userArray)
             console.log(JSON.stringify(userArray))
         }
     },
@@ -83,7 +82,6 @@ Vue.component('user-info-form', {
                 && this.password === this.confirmPassword
                 && this.name.length > 3
                 && typeof this.name !== 'number'
-                // && !isNaN(this.validName(this.name)) && typeof this.name == 'string'
                 && this.validEmail(this.email)
                 && this.validNumber(this.number)
                 && typeof this.number !== "string"
