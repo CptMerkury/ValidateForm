@@ -14,7 +14,6 @@ body {
     width: 90%;
     align-items: flex-start;
     flex-flow: wrap;
-    padding: 1rem;
 }
 
 .nav-bar {
@@ -25,9 +24,9 @@ body {
 
 .form {
     margin: 0 auto;
-    width: 60%;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
     padding: 20px;
 }
 
@@ -38,4 +37,8 @@ body {
 .userInfo {
     font-family: Montserrat, sans-serif;
     margin: 10px 0;
+}
+
+.username{
+    margin: 0 auto;
 }
