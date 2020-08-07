@@ -13,7 +13,7 @@ body {
     display: flex;
     width: 90%;
     align-items: flex-start;
-    flex-flow: wrap;
+    flex-wrap: wrap;
 }
 
 .nav-bar {
@@ -27,6 +27,7 @@ body {
     display: flex;
     justify-content: left;
     align-items: center;
+    flex-wrap: wrap;
     padding: 20px;
 }
 
