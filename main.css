@@ -22,12 +22,7 @@ body {
 }
 
 .form {
-    margin: 0 auto;
-    display: inline-flex;
-    width: 50%;
-    justify-content: left;
-    align-items: center;
-    flex-flow: wrap;
+    float: left;
     padding: 20px;
 }
 
@@ -36,6 +31,9 @@ body {
 }
 
 .userInfo {
+    display: block;
     font-family: Montserrat, sans-serif;
     margin: 10px 0;
+    margin-right: 10%;
+
 }

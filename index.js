@@ -26,7 +26,6 @@ Vue.component('username-field', {
         return {
             userInfo: []
         }
-
     },
     methods: {
         addUserInfo(userArray) {
