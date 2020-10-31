@@ -40,7 +40,6 @@ Vue.component('username-field', {
     }
 })
 
-
 Vue.component('user-info-form', {
     template: `
      <form @submit.prevent="sendSubmit">
